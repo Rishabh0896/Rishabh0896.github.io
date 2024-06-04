@@ -1,479 +1,208 @@
-<!--index.html-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio | Rishabh</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- Importing Styles CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav id="header">
+            <div class="nav-logo">
+                <p class="nav-name">RG</p>
+                <span>.</span>
+            </div>
+            <div class="nav-menu" id="myNavMenu">
+                <ul class="nav_menu_list">
+                    <li class="nav_list">
+                        <a href="#home" class="nav-link active-link">Home</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#about" class="nav-link">About</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#projects" class="nav-link">Projects</a>
+                        <div class="circle"></div>
+                    </li>
+                    <li class="nav_list">
+                        <a href="#contact" class="nav-link">Contact</a>
+                        <div class="circle"></div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+        <main id="main-wrapper" class="wrapper">
+            <!-- -------------- FEATURED BOX ---------------- -->
+            <section class="featured-box" id="home">
+                <div class="featured-text">
+                    <div class="featured-text-card">
+                        <span>Rishabh Gupta</span>
+                    </div>
+                    <div class="featured-name">
+                        <p>I'm <span class="typedText"></span></p>
+                    </div>
+                    <div class="featured-text-info">
+                        <p>Experienced frontend developer with a passion for creating visually stunning
+                            and user-friendly websites.
+                        </p>
+                    </div>
+<!--                    <div class="featured-text-btn">-->
+<!--                        <button class="btn blue-btn">Hire Me</button>-->
+<!--                        <button class="btn">Download CV <i class="uil uil-file-alt"></i></button>-->
+<!--                    </div>-->
+                    <div class="social_icons">
+                        <div class="icon"><i class="uil uil-instagram"></i></div>
+                        <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
+                        <div class="icon"><i class="uil uil-dribbble"></i></div>
+                        <div class="icon"><i class="uil uil-github-alt"></i></div>
+                    </div>
+                </div>
+                <div class="featured-image">
+                    <div class="image">
+                        <img src="assets/avatar.jpg" alt="avatar">
+                    </div>
+                </div>
+                <div class="scroll-icon-box">
+                    <a href="#about" class="scroll-btn">
+                        <i class="uil uil-mouse-alt"></i>
+                        <p>Scroll Down</p>
+                    </a>
+                </div>
+            </section>
+            <!-- -------------- ABOUT BOX ---------------- -->
+            <section class="section" id="about">
+                <div class="top-header">
+                    <h1>About Me</h1>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="about-info">
+                            <h3>My introduction</h3>
+                            <p>I am well-versed in HTML, CSS and JavaScript , and other cutting edge
+                                frameworks and libraries,which allows me to implement interactive features.
+                                Additionally, I have experirence working with content management systems (CMS) like
+                                WordPress.
+                            </p>
+                            <div class="about-btn">
+                                <button class="btn">Download CV <i class="uil uil-import"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Frontend</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Bootstrap</span>
+                                <span>JavaScript</span>
+                                <span>Vue</span>
+                                <span>React</span>
+                                <span>Angular</span>
+                            </div>
+                        </div>
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Backend</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>PHP</span>
+                                <span>JAVA</span>
+                                <span>Python</span>
+                                <span>C++</span>
+                            </div>
+                        </div>
+                        <div class="skills-box">
+                            <div class="skills-header">
+                                <h3>Database</h3>
+                            </div>
+                            <div class="skills-list">
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------- PROJECT BOX ---------------- -->
+            <section class="section" id="projects">
+                <div class="top-header">
+                    <h1>Projects</h1>
+                </div>
+                <div class="project-container">
+                    <div class="project-box">
+                        <i class="uil uil-briefcase-alt"></i>
+                        <h3>Completed</h3>
+                        <label>15+ Finished Projects</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-users-alt"></i>
+                        <h3>Clients</h3>
+                        <label>25+ Happy Clients</label>
+                    </div>
+                    <div class="project-box">
+                        <i class="uil uil-award"></i>
+                        <h3>Experience</h3>
+                        <label>7+ Years in the field</label>
+                    </div>
+                </div>
+            </section>
+            <!-- -------------- CONTACT BOX ---------------- -->
+            <section class="section" id="contact">
+                <div class="top-header">
+                    <h1>Get in touch</h1>
+                    <span>Do you have a project in your mind, contact me here</span>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="contact-info">
+                            <h2>Find Me <i class="uil uil-corner-right-down"></i></h2>
+                            <p><i class="uil uil-envelope"></i> Email: john@doe.com</p>
+                            <p><i class="uil uil-phone"></i> Tel: +250 708 770 000</p>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-control">
+                            <div class="form-inputs">
+                                <input type="text" class="input-field" placeholder="Name">
+                                <input type="text" class="input-field" placeholder="Email">
+                            </div>
+                            <div class="text-area">
+                                <textarea placeholder="Message"></textarea>
+                            </div>
+                            <div class="form-button">
+                                <button class="btn">Send <i class="uil uil-message"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
 
-<!DOCTYPE html> 
-<html lang="en"> 
-
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0"> 
-    <title>My Portfolio</title> 
-    <link rel="stylesheet"
-        href= 
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-        integrity= 
-"sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-            crossorigin="anonymous" referrerpolicy="no-referrer" /> 
-    <link rel="stylesheet" href="style.css"> 
-    <link rel="stylesheet" href="responsive.css"> 
-</head> 
-
-<body> 
-    <!-- Navbar header section -->
-    <header class="header"> 
-        <nav class="navbar"> 
-            <div class="logo"> 
-                <h2 class="logo-heading">Emrit Diyal</h2> 
-            </div> 
-            <div class="hamburger" id="hamburger"> 
-                <i class="fas fa-bars hamburger-icon"></i> 
-                <i class="fas fa-times cross-icon"></i> 
-            </div> 
-            <div class="menu"> 
-                <ul class="menu-list"> 
-                    <li class="menu-list-items"> 
-                        <a class="links" href="#home"> 
-                            Home 
-                        </a> 
-                    </li> 
-                    <li class="menu-list-items"> 
-                        <a class="links" href="#portfolio"> 
-                            Portfolio 
-                        </a> 
-                    </li> 
-                    <li class="menu-list-items"> 
-                        <a class="links" href="#about"> 
-                            About 
-                        </a> 
-                    </li> 
-                    <li class="menu-list-items"> 
-                        <a class="links" href="#services"> 
-                            Services 
-                        </a> 
-                    </li> 
-                    <li class="menu-list-items"> 
-                        <a class="links" href="#contact"> 
-                            Contact Me 
-                        </a> 
-                    </li> 
-                </ul> 
-            </div> 
-        </nav> 
-    </header> 
-
-    <!-- Main hero banner -->
-    <section id="home" class="hero"> 
-        <div class="intro"> 
-            <div class="headings"> 
-                <h3 class="greet-heading">Hello, I'm</h3> 
-                <h1 class="my-heading">Emrit Diyal</h1> 
-                <h4 class="sub-heading"> 
-                    A Software Engineer with 3 years of Experience. 
-                </h4> 
-            </div> 
-            <div class="intro-buttons"> 
-                <button class="btn common-btn">Hire Me</button> 
-                <button class="btn ghost-btn">Get Resume</button> 
-            </div> 
-        </div> 
-    </section> 
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio"> 
-        <div class="portfolio-heading"> 
-            <h1 class="my-heading text-center">Featured Portfolio</h1> 
-        </div> 
-        <div class="portfolio-content"> 
-            <div class="my-row"> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="./Images/designImage2.avif"
-                                alt="Web Design Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text">Web Design</h3> 
-                        <p class="small-para blue-text">Designing</p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="./Images/webDevelopment2.avif"
-                                alt="Web Development Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            Web Development 
-                        </h3> 
-                        <p class="small-para blue-text">Development</p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="./Images/SEOImage2.avif" alt="SEO Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text">SEO</h3> 
-                        <p class="small-para blue-text">Optimization</p> 
-                    </div> 
-                </div> 
-            </div> 
-            <div class="my-row"> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="./Images/contentImage2.avif"
-                                alt="Content Writting Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            Content Writing 
-                        </h3> 
-                        <p class="small-para blue-text">Writing</p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="./Images/wordpressImage2.avif"
-                                alt="Wordpress Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            WordPress Dev 
-                        </h3> 
-                        <p class="small-para blue-text"> 
-                            Content Management System 
-                        </p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card port-card"> 
-                        <div class="image"> 
-                            <img src="./Images/videoEditing2.avif"
-                                alt="Video Editing Image"> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            Video Editing 
-                        </h3> 
-                        <p class="small-para blue-text">Editing</p> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-
-    <!-- About Section -->
-    <section id="about" class="about"> 
-        <div class="about-text"> 
-            <h1 class="my-heading">About Me</h1> 
-            <p class="lead-para"> 
-                GeeksforGeeks is a leading platform 
-                that provides computer science 
-                resources and coding challenges for 
-                programmers and technology 
-                enthusiasts, along with interview 
-                and exam preparations for upcoming 
-                aspirants. With a strong emphasis on 
-                enhancing coding skills and knowledge, 
-                it has become a trusted destination 
-                for over 12 million plus registered 
-                users worldwide. The platform offers 
-                a vast collection of tutorials, practice 
-                problems, interview tutorials, articles, 
-                and courses, covering various domains 
-                of computer science. 
-            </p> 
-            <p> 
-                Our exceptional mentors hailing from top 
-                colleges & organizations have the 
-                ability to guide you on a journey from 
-                the humble beginnings of coding to 
-                the pinnacle of expertise. Under their 
-                guidance watch your skills flourish 
-                as we lay the foundation and help you 
-                conquer the world of coding. 
-            </p> 
-        </div> 
-        <div class="about-image"> 
-            <img src="./Images/heroImg2.avif" alt="About Image"> 
-        </div> 
-    </section> 
-
-    <!-- Services Section -->
-    <section class="services" id="services"> 
-        <div class="services-heading"> 
-            <h1 class="my-heading text-center">My Services</h1> 
-        </div> 
-        <div class="services-content"> 
-            <div class="my-row"> 
-                <div class="my-col"> 
-                    <div class="my-card"> 
-                        <div class="icon"> 
-                            <i class="fas fa-paint-brush"></i> 
-                        </div> 
-                        <h3 class="greet-heading blue-text">Web Design</h3> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card"> 
-                        <div class="icon"> 
-                            <i class="fa-solid fa-code"></i> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            Web Development 
-                        </h3> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card"> 
-                        <div class="icon"> 
-                            <i class="fas fa-chart-line"></i> 
-                        </div> 
-                        <h3 class="greet-heading blue-text">SEO</h3> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                    </div> 
-                </div> 
-            </div> 
-            <div class="my-row"> 
-                <div class="my-col"> 
-                    <div class="my-card"> 
-                        <div class="icon"> 
-                            <i class="fas fa-quote-left"></i> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            Content Writting 
-                        </h3> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining of websites. 
-                            It includes aspects such as web design, 
-                            web publishing, web programming, and 
-                            database management. It is the creation 
-                            of an application that works over the 
-                            internet i.e. websites. 
-                        </p> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining of websites. 
-                            It includes aspects such as web design, 
-                            web publishing, web programming, and 
-                            database management. It is the creation of an 
-                            application that works over the internet i.e. 
-                            websites. 
-                        </p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card"> 
-                        <div class="icon"> 
-                            <i class="fab fa-wordpress-simple"></i> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            WordPress Dev 
-                        </h3> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining of websites. 
-                            It includes aspects such as web design, 
-                            web publishing, web programming, and 
-                            database management. It is the creation 
-                            of an application that works over the 
-                            internet i.e. websites. 
-                        </p> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                    </div> 
-                </div> 
-                <div class="my-col"> 
-                    <div class="my-card"> 
-                        <div class="icon"> 
-                            <i class="fas fa-video"></i> 
-                        </div> 
-                        <h3 class="greet-heading blue-text"> 
-                            Video Editing 
-                        </h3> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                        <p class="small-para"> 
-                            Web development refers to the creating, 
-                            building, and maintaining 
-                            of websites. It includes aspects such as 
-                            web design, web publishing, 
-                            web programming, and database management. 
-                            It is the creation of an 
-                            application that works over the internet 
-                            i.e. websites. 
-                        </p> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-
-    <!-- Contact me section -->
-    <section class="contact" id="contact"> 
-        <div class="contact-heading"> 
-            <h1 class="my-heading text-center">Contact Me</h1> 
-        </div> 
-        <div class="contact-content"> 
-            <div class="contact-form-container"> 
-                <h1 class="greet-heading">Get In Touch</h1> 
-                <form class="contact-form"> 
-                    <input class="form-controls" type="text"
-                        placeholder="Your Name"> 
-                    <input class="form-controls" type="text"
-                        placeholder="Your Email"> 
-                    <input class="form-controls" type="text"
-                        placeholder="Your Phone"> 
-                    <textarea class="form-controls"
-                            placeholder="Write your message"
-                            name="message" id="" cols="30"
-                            rows="10"> 
-                    </textarea> 
-                    <input class="form-btn btn common-btn"
-                        type="submit" value="Send Message"> 
-                </form> 
-            </div> 
-            <div class="contact-details"> 
-                <h1 class="greet-heading">My Contact Details</h1> 
-                <div class="details"> 
-                    <h5 class="contact-heading">EMAIL</h5> 
-                    <p class="contact-text">example@gmail.com</p> 
-                </div> 
-                <div class="details"> 
-                    <h5 class="contact-heading">PHONE</h5> 
-                    <p class="contact-text">+91 0123456789</p> 
-                </div> 
-                <div class="details"> 
-                    <h5 class="contact-heading">FAX</h5> 
-                    <p class="contact-text">+91 0123456789</p> 
-                </div> 
-                <div class="details"> 
-                    <h5 class="contact-heading">ADDRESS</h5> 
-                    <p class="contact-text">San Francisco, CA</p> 
-                    <p>4th Floor8 Lower</p> 
-                    <p>San Francisco street, M1 50F</p> 
-                </div> 
-            </div> 
-        </div> 
-    </section> 
-
-    <!-- Footer section -->
-    <footer class="footer"> 
-        <div class="footer-content text-center"> 
-            <h4> 
-                Copyright © 2023 All rights reserved | 
-                This portfolio website template is created 
-                by GeeksforGeeks. 
-            </h4> 
-            <div class="social-links"> 
-                <div class="footer-menu"> 
-                    <ul class="footer-menu-list"> 
-                        <li class="footer-list-items"> 
-                            <a class="footer-links" href="#"> 
-                                <i class="fab fa-facebook-f"></i> 
-                            </a> 
-                        </li> 
-                        <li class="footer-list-items"> 
-                            <a class="footer-links" href="#"> 
-                                <i class="fab fa-twitter"></i> 
-                            </a> 
-                        </li> 
-                        <li class="footer-list-items"> 
-                            <a class="footer-links" href="#"> 
-                                <i class="fab fa-instagram"></i> 
-                            </a> 
-                        </li> 
-                        <li class="footer-list-items"> 
-                            <a class="footer-links" href="#"> 
-                                <i class="fab fa-linkedin-in"></i> 
-                            </a> 
-                        </li> 
-                    </ul> 
-                </div> 
-            </div> 
-        </div> 
-    </footer> 
-
-    <script src= 
-"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js"
-        integrity= 
-"sha512-uKQ39gEGiyUJl4AI6L+ekBdGKpGw4xJ55+xyJG7YFlJokPNYegn9KwQ3P8A7aFQAUtUsAQHep+d/lrGqrbPIDQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"> 
-    </script> 
-    <script src="script.js"></script> 
-</body> 
+        </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <!-- ----- TYPING JS Link ----- -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Scroll Reveal --->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!---- Including App.js -->
+    <script src="app.js"></script>
+</body>
 </html>

@@ -86,7 +86,7 @@ const srRight = ScrollReveal({
 })
 
 srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
+srRight.reveal('.my-form-control',{delay: 100})
 
 
 

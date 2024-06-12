@@ -273,16 +273,16 @@ body{
 }
 
 /* ----- MAIN BOX ----- */
-.section{
+.custom-section{
     padding-block: 5em;
 }
-.row{
+.contact-row{
     display: flex;
     justify-content: space-between;
     width: 100%;
     gap: 50px;
 }
-.col{
+.contact-col{
     display: flex;
     width: 50%;
 }
@@ -449,7 +449,7 @@ h3{
 }
 
 /* ----- CONTACT FORM ----- */
-.form-control{
+.my-form-control{
     display: flex;
     flex-direction: column;
     gap: 10px;

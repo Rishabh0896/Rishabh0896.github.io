@@ -13,7 +13,7 @@ function myMenuFunction(){
 window.onscroll = function() {headerShadow()};
 
 function headerShadow() {
-    const navHeader =document.getElementById("header");
+    const navHeader =document.getElementById("my-nav-bar");
 
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
 

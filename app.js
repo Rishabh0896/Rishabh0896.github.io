@@ -2,10 +2,10 @@
 function myMenuFunction(){
     var menuBtn = document.getElementById("myNavMenu");
 
-    if(menuBtn.className === "nav-menu"){
+    if(menuBtn.className === "custom-nav-menu"){
         menuBtn.className += " responsive";
     } else {
-        menuBtn.className = "nav-menu";
+        menuBtn.className = "custom-nav-menu";
     }
 }
 
@@ -13,7 +13,7 @@ function myMenuFunction(){
 window.onscroll = function() {headerShadow()};
 
 function headerShadow() {
-    const navHeader =document.getElementById("header");
+    const navHeader =document.getElementById("my-nav-bar");
 
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop >  50) {
 
@@ -86,7 +86,7 @@ const srRight = ScrollReveal({
 })
 
 srRight.reveal('.skills-box',{delay: 100})
-srRight.reveal('.form-control',{delay: 100})
+srRight.reveal('.my-form-control',{delay: 100})
 
 
 
@@ -104,14 +104,29 @@ function scrollActive() {
 
         if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
 
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
+            document.querySelector('.custom-nav-menu a[href*=' + sectionId + ']').classList.add('active-link')
 
         }  else {
 
-            document.querySelector('.nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
+            document.querySelector('.custom-nav-menu a[href*=' + sectionId + ']').classList.remove('active-link')
 
         }
     })
 }
 
 window.addEventListener('scroll', scrollActive)
+
+
+/* ----- REDIRECT TO GITHUB REPO ----- */
+const projectBoxes = document.querySelectorAll('.project-box');
+
+// Loop through each project box
+projectBoxes.forEach(box => {
+    // Add event listener for click event
+    box.addEventListener('click', () => {
+        // Get the GitHub URL from data attribute
+        const githubUrl = box.getAttribute('data-github-url');
+        // Open the GitHub URL in a new tab
+        window.open(githubUrl, '_blank');
+    });
+});

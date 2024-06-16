@@ -60,6 +60,7 @@ sr.reveal('.featured-image',{delay: 300})
 
 /* -- PROJECT BOX -- */
 sr.reveal('.project-box',{interval: 200})
+sr.reveal('#carouselExampleIndicators',{delay: 200})
 
 /* -- HEADINGS -- */
 sr.reveal('.top-header',{})
@@ -74,7 +75,7 @@ const srLeft = ScrollReveal({
     reset: true
 })
 
-srLeft.reveal('.about-info',{delay: 100})
+srLeft.reveal('.about-info',{})
 srLeft.reveal('.contact-info',{delay: 100})
 
 /* -- ABOUT SKILLS & FORM BOX -- */

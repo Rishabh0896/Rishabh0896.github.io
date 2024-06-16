@@ -28,7 +28,8 @@
 
 /* ----- SMOOTH SCROLL ----- */
 html{
-    scroll-behavior: auto;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 /* ----- CHANGE THE SCROLL BAR DESIGN ----- */
@@ -77,10 +78,6 @@ i{
 body{
     background: var(--body-color);
 }
-.container{
-    width: 100%;
-    position: relative;
-}
 
 /* ----- NAVIGATION BAR ----- */
 #my-nav-bar{
@@ -112,6 +109,7 @@ body{
 }
 .custom-nav-menu, .nav_menu_list{
     display: flex;
+    scroll-snap-align: start;
 }
 .custom-nav-menu .my_nav_list{
     list-style: none;
@@ -255,6 +253,8 @@ body{
 /* ----- MAIN BOX ----- */
 .custom-section{
     padding-block: 5em;
+    height: 100vh;
+    scroll-snap-align: start;
 }
 .contact-row{
     display: flex;

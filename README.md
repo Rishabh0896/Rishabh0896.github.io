@@ -25,4 +25,4 @@ The portfolio is built using:
 
 ## License
 
-© 2025 Rishabh Gupta. All rights reserved. 
+© 2024 Rishabh Gupta. All rights reserved. 

@@ -26,17 +26,45 @@ function updateThemeIcon(isDarkMode) {
 /* ==========================================================================
    Navigation & Scrolling
    ========================================================================== */
-// Smooth scrolling for navigation links
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
-        }
+// Smooth scrolling for navigation links and scroll hints
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Handle scroll hints
+    document.querySelectorAll('.scroll-hint').forEach(hint => {
+        hint.addEventListener('click', () => {
+            const currentSection = hint.closest('section');
+            const isUpArrow = hint.classList.contains('scroll-hint-up');
+            
+            if (isUpArrow) {
+                // Scroll to top for the "Back to Top" arrow
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            } else {
+                // Find and scroll to the next section
+                const nextSection = currentSection.nextElementSibling;
+                if (nextSection && nextSection.tagName === 'SECTION') {
+                    nextSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
     });
 });
 
@@ -97,4 +125,68 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Listen for scroll events
-window.addEventListener('scroll', animateOnScroll); 
+window.addEventListener('scroll', animateOnScroll);
+
+// Project Slider Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const slider = document.querySelector('.project-slides');
+    const slides = document.querySelectorAll('.project-slide');
+    const prevBtn = document.querySelector('.slider-prev');
+    const nextBtn = document.querySelector('.slider-next');
+    const dots = document.querySelectorAll('.dot');
+    
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+
+    // Initialize slider
+    updateSlider();
+
+    // Previous slide button
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+    });
+
+    // Next slide button
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    });
+
+    // Dot navigation
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlider();
+        });
+    });
+
+    // Update slider position and active dot
+    function updateSlider() {
+        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+        
+        // Update active dot
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    // Optional: Auto-advance slides
+    let slideInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+    }, 5000); // Change slide every 5 seconds
+
+    // Pause auto-advance on hover
+    slider.addEventListener('mouseenter', () => {
+        clearInterval(slideInterval);
+    });
+
+    // Resume auto-advance when mouse leaves
+    slider.addEventListener('mouseleave', () => {
+        slideInterval = setInterval(() => {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateSlider();
+        }, 5000);
+    });
+}); 

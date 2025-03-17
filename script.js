@@ -134,59 +134,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const prevBtn = document.querySelector('.slider-prev');
     const nextBtn = document.querySelector('.slider-next');
     const dots = document.querySelectorAll('.dot');
-    
     let currentSlide = 0;
     const totalSlides = slides.length;
 
-    // Initialize slider
-    updateSlider();
+    // Function to update slide position
+    function updateSlide() {
+        slider.style.transform = `translateX(-${currentSlide * 33.333}%)`;
+        
+        // Update dots
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
 
-    // Previous slide button
-    prevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateSlider();
+        // Update button states
+        prevBtn.style.opacity = currentSlide === 0 ? '0.5' : '1';
+        nextBtn.style.opacity = currentSlide === totalSlides - 1 ? '0.5' : '1';
+    }
+
+    // Next slide
+    nextBtn.addEventListener('click', () => {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlide();
+        }
     });
 
-    // Next slide button
-    nextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlider();
+    // Previous slide
+    prevBtn.addEventListener('click', () => {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlide();
+        }
     });
 
     // Dot navigation
     dots.forEach((dot, index) => {
         dot.addEventListener('click', () => {
             currentSlide = index;
-            updateSlider();
+            updateSlide();
         });
     });
 
-    // Update slider position and active dot
-    function updateSlider() {
-        slider.style.transform = `translateX(-${currentSlide * 100}%)`;
-        
-        // Update active dot
-        dots.forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
-    }
-
-    // Optional: Auto-advance slides
-    let slideInterval = setInterval(() => {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateSlider();
-    }, 5000); // Change slide every 5 seconds
-
-    // Pause auto-advance on hover
-    slider.addEventListener('mouseenter', () => {
-        clearInterval(slideInterval);
-    });
-
-    // Resume auto-advance when mouse leaves
-    slider.addEventListener('mouseleave', () => {
-        slideInterval = setInterval(() => {
-            currentSlide = (currentSlide + 1) % totalSlides;
-            updateSlider();
-        }, 5000);
-    });
+    // Initialize first slide
+    updateSlide();
 }); 

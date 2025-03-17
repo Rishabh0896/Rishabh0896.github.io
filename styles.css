@@ -3080,3 +3080,18 @@ body {
     background: var(--primary-color);
     transform: scale(1.2);
 }
+
+@media (max-width: 991px) {
+    .hero-section .row {
+        flex-direction: column;
+    }
+    
+    .hero-section .col-lg-6:last-child {
+        order: -1;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-section .col-lg-6:first-child {
+        order: 2;
+    }
+}

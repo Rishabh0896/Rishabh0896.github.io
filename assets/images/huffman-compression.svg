@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#fffafa"/>
+    
+    <!-- Binary Tree Representation -->
+    <g transform="translate(400,200)">
+        <!-- Tree Connections -->
+        <path d="M0,0 L-100,100 M0,0 L100,100" stroke="#6c757d" stroke-width="3"/>
+        <path d="M-100,100 L-150,200 M-100,100 L-50,200" stroke="#6c757d" stroke-width="3"/>
+        <path d="M100,100 L50,200 M100,100 L150,200" stroke="#6c757d" stroke-width="3"/>
+        
+        <!-- Tree Nodes -->
+        <circle cx="0" cy="0" r="30" fill="#0d6efd"/>
+        <circle cx="-100" cy="100" r="25" fill="#198754"/>
+        <circle cx="100" cy="100" r="25" fill="#198754"/>
+        <circle cx="-150" cy="200" r="20" fill="#dc3545"/>
+        <circle cx="-50" cy="200" r="20" fill="#dc3545"/>
+        <circle cx="50" cy="200" r="20" fill="#dc3545"/>
+        <circle cx="150" cy="200" r="20" fill="#dc3545"/>
+        
+        <!-- Binary Labels -->
+        <text x="-60" y="90" fill="white" font-family="monospace" font-size="24">0</text>
+        <text x="60" y="90" fill="white" font-family="monospace" font-size="24">1</text>
+    </g>
+</svg> 

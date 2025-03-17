@@ -1,0 +1,36 @@
+<svg width="570" height="370" viewBox="0 0 570 370" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <!-- Background -->
+    <rect width="570" height="370" fill="#fffafa" />
+
+    <!-- Main Group with Translation -->
+    <g transform="translate(40,0)">
+        <!-- Dog Body -->
+        <rect x="150" y="150" width="200" height="100" fill="#fd7e14" stroke="black" stroke-width="3"/>
+        <rect x="250" y="150" width="70" height="50" fill="black" stroke="black" stroke-width="3"/>
+        <rect x="300" y="200" width="50" height="30" fill="black" stroke="black" stroke-width="3"/>
+        
+        <!-- Dog Head -->
+        <rect x="80" y="100" width="130" height="80" fill="#fd7e14" stroke="black" stroke-width="3"/>
+        <rect x="130" y="100" width="80" height="50" fill="black" stroke="black" stroke-width="3"/>
+        <rect x="80" y="100" width="20" height="20" fill="black" stroke="black" stroke-width="3"/>
+        <rect x="80" y="160" width="20" height="10" fill="black" stroke="black" stroke-width="3"/>
+        <circle cx="90" cy="145" r="1" fill="black" />
+        <circle cx="100" cy="148" r="1" fill="black" />
+        <circle cx="100" cy="142" r="1" fill="black" />
+
+        <!-- Ear-->
+        <rect x="210" y="100" width="30" height="20" fill="black" stroke="black" stroke-width="3"/>
+        <!-- Eye -->
+        <circle cx="160" cy="130" r="15" fill="white" stroke="black" stroke-width="3"/>
+        <circle cx="153" cy="125" r="7" fill="black" />
+        
+        <!-- Legs -->
+        <rect x="170" y="250" width="30" height="50" fill="#fd7e14" stroke="black" stroke-width="3"/>
+        <rect x="200" y="250" width="20" height="40" fill="#fd7e14" stroke="black" stroke-width="3"/>
+        <rect x="290" y="250" width="30" height="50" fill="#fd7e14" stroke="black" stroke-width="3"/>
+        <rect x="320" y="250" width="20" height="40" fill="#fd7e14" stroke="black" stroke-width="3"/>
+        
+        <!-- Tail -->
+        <rect x="350" y="150" width="30" height="50" fill="black" stroke="black" stroke-width="3"/>
+    </g>
+</svg> 

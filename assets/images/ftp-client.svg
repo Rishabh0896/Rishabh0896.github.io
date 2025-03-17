@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="400" viewBox="10 10 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <!-- Background -->
+    <rect width="400" height="400" fill="#fffafa" rx="20"/>
+    
+    <!-- Server Icon -->
+    <g transform="translate(240, 160)">
+        <rect x="-30" y="-60" width="60" height="120" fill="#2563eb" rx="8"/>
+        <rect x="-20" y="-50" width="40" height="10" fill="#1e40af" rx="2"/>
+        <rect x="-20" y="-30" width="40" height="10" fill="#1e40af" rx="2"/>
+        <rect x="-20" y="-10" width="40" height="10" fill="#1e40af" rx="2"/>
+        <!-- Server Status Lights -->
+        <circle cx="0" cy="30" r="5" fill="#22c55e"/>
+        <circle cx="15" cy="30" r="5" fill="#22c55e"/>
+    </g>
+    
+    <!-- Client Computer -->
+    <g transform="translate(100, 160)">
+        <!-- Monitor -->
+        <rect x="-40" y="-30" width="80" height="60" fill="#2563eb" rx="5"/>
+        <rect x="-35" y="-25" width="70" height="50" fill="#1e40af" rx="3"/>
+        <!-- Stand -->
+        <path d="M-10 30 L10 30 L5 40 L-5 40 Z" fill="#2563eb"/>
+        <rect x="-15" y="40" width="30" height="5" fill="#2563eb" rx="2"/>
+    </g>
+    
+    <!-- Connection Lines and Data Transfer Animation -->
+    <g stroke="#2563eb" stroke-width="3">
+        <!-- Main Connection Line -->
+        <line x1="140" y1="148" x2="210" y2="148" stroke-dasharray="5,5"/>
+        <line x1="140" y1="172" x2="210" y2="172" stroke-dasharray="5,5"/>
+        
+        <!-- Animated Data Packets -->
+        <g>
+            <!-- Upload Animation -->
+            <rect width="15" height="15" fill="#2563eb" rx="2">
+                <animateMotion
+                    path="M140,140 L210,140"
+                    dur="2s"
+                    repeatCount="indefinite"/>
+            </rect>
+            <!-- Download Animation -->
+            <rect width="15" height="15" fill="#1e40af" rx="2">
+                <animateMotion
+                    path="M210,165 L140,165"
+                    dur="2s"
+                    repeatCount="indefinite"/>
+            </rect>
+        </g>
+    </g>
+</svg> 

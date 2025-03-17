@@ -1,0 +1,50 @@
+<svg width="570" height="370" viewBox="0 0 570 370" xmlns="http://www.w3.org/2000/svg" fill="none">
+    <!-- Background -->
+    <rect width="570" height="370" fill="#fffafa" />
+    
+    <!-- Main Content Group -->
+    <g transform="translate(20,30)">
+        <!-- Wordle Grid -->
+        <g transform="translate(120,40)">
+            <!-- Row 1 - Completed with some correct/incorrect letters -->
+            <rect x="0" y="0" width="50" height="50" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+            <rect x="60" y="0" width="50" height="50" fill="#198754" stroke="#495057" stroke-width="2"/>
+            <rect x="120" y="0" width="50" height="50" fill="#dc3545" stroke="#495057" stroke-width="2"/>
+            <rect x="180" y="0" width="50" height="50" fill="#6c757d" stroke="#495057" stroke-width="2"/>
+            <rect x="240" y="0" width="50" height="50" fill="#198754" stroke="#495057" stroke-width="2"/>
+            
+            <!-- Letters in Row 1 -->
+            <text x="17" y="35" font-family="Arial" font-size="24" fill="white">G</text>
+            <text x="78" y="35" font-family="Arial" font-size="24" fill="white">U</text>
+            <text x="137" y="35" font-family="Arial" font-size="24" fill="white">E</text>
+            <text x="198" y="35" font-family="Arial" font-size="24" fill="white">S</text>
+            <text x="257" y="35" font-family="Arial" font-size="24" fill="white">S</text>
+            
+            <!-- Row 2 - Current attempt -->
+            <rect x="0" y="60" width="50" height="50" fill="white" stroke="#495057" stroke-width="2"/>
+            <rect x="60" y="60" width="50" height="50" fill="white" stroke="#495057" stroke-width="2"/>
+            <rect x="120" y="60" width="50" height="50" fill="white" stroke="#495057" stroke-width="2"/>
+            <rect x="180" y="60" width="50" height="50" fill="white" stroke="#495057" stroke-width="2"/>
+            <rect x="240" y="60" width="50" height="50" fill="white" stroke="#495057" stroke-width="2"/>
+            
+            <!-- Empty Rows -->
+            <g fill="none" stroke="#dee2e6" stroke-width="1">
+                <g transform="translate(0,120)">
+                    <rect x="0" y="0" width="50" height="50"/>
+                    <rect x="60" y="0" width="50" height="50"/>
+                    <rect x="120" y="0" width="50" height="50"/>
+                    <rect x="180" y="0" width="50" height="50"/>
+                    <rect x="240" y="0" width="50" height="50"/>
+                </g>
+                <g transform="translate(0,180)">
+                    <rect x="0" y="0" width="50" height="50"/>
+                    <rect x="60" y="0" width="50" height="50"/>
+                    <rect x="120" y="0" width="50" height="50"/>
+                    <rect x="180" y="0" width="50" height="50"/>
+                    <rect x="240" y="0" width="50" height="50"/>
+                </g>
+            </g>
+        </g>
+        
+    </g>
+</svg> 
